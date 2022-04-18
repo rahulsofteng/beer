@@ -9,13 +9,13 @@ import java.util.UUID;
 
 public interface BeerClient {
 
-    Mono<Beer> getBeerById(UUID id);
+    Mono<Beer> getBeerById(UUID id, Boolean showInventoryOnHand);
 
-    Mono<ResponseEntity> createBeer(Beer beer);
+    Mono<ResponseEntity<Void>> createBeer(Beer beer);
 
-    Mono<ResponseEntity> updateBeer(Beer beer);
+    Mono<ResponseEntity<Void>> updateBeer(UUID id, Beer beer);
 
-    Mono<ResponseEntity> deleteBeer(Beer beer);
+    Mono<ResponseEntity<Void>> deleteBeer(UUID id);
 
     Mono<Beer> getBeerByUPC(String upc);
 

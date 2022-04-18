@@ -2,6 +2,7 @@ package rahul.springframework.beer.domain;
 
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Data
@@ -21,5 +22,7 @@ public class Beer {
     private String upc;
 
     private String quantityOnHand;
+
+    private BigDecimal price;
 
 }
